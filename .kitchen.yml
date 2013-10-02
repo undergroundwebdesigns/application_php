@@ -1,0 +1,15 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: false
+
+platforms:
+- name: rs-ubuntu-12.04
+  driver_config:
+    box: RightImage_Ubuntu_12.04_x64_v13.5.0.1
+    box_url: https://rightscale-vagrant.s3.amazonaws.com/virtualbox/ubuntu/12.04/RightImage_Ubuntu_12.04_x64_v13.5.0.1.box
+
+suites:
+- name: default
+  run_list: ["recipe[minitest-handler]", "recipe[expressionengine_test]"]
+  attributes: {}
