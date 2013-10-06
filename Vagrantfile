@@ -72,6 +72,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
+      :newspring => {
+        :web_root => "/var/www/",
+        :system_folder => "hello",
+        :user => "newspring"
+      }
     }
 
     chef.run_list = [

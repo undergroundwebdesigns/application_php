@@ -5,5 +5,4 @@ gem 'berkshelf'
 gem 'minitest-chef-handler'
 gem 'thor-foodcritic'
 gem 'test-kitchen'
-gem 'vagrant'
 gem 'kitchen-vagrant', :group => :integration
